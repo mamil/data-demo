@@ -47,13 +47,13 @@ func main() {
 	flag.Parse()
 
 	log.Infof("command: rc1Cmd:%v, rc2Cmd:%v, userCmd:%v", rc1Cmd, rc2Cmd, userCmd)
-	if rc1Cmd != 0 {
+	if rc1Cmd != 0 { // 有写操作的从主数据库读取
 		rcCheck(1, rc1Cmd)
 		log.Infof("rc1 check done")
-	} else if rc2Cmd != 0 {
+	} else if rc2Cmd != 0 { // 全部从从数据库读取
 		rcCheck(2, rc2Cmd)
 		log.Infof("rc2 check done")
-	} else if userCmd != 0 {
+	} else if userCmd != 0 { // 创建用户
 		createUser(userCmd)
 	}
 }
