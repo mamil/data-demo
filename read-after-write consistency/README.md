@@ -35,3 +35,6 @@ INFO[0000] register table success
 INFO[0000] command: rc1Cmd:1000, rc2Cmd:0, userCmd:0
 INFO[0005] rc1 check done
 ```
+
+# 详细分析
+见 https://www.cnblogs.com/mamil/articles/16944413.html
